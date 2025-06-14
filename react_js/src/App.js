@@ -7,9 +7,15 @@
 // import { Question7 } from "./interview_questions/day_2/Question7";
 // import { Question9 } from "./interview_questions/day_2/Question9";
 
-import { Question10 } from "./interview_questions/day_2/Question10";
+// import { Question10 } from "./interview_questions/day_2/Question10";
+import { useState } from "react";
+import { Question11 } from "./interview_questions/day_3/Question11";
 
 function App() {
+  const [toggle, setToggle] = useState(false);
+  const handleToggle = () => {
+    setToggle(!toggle);
+  };
   return (
     <div className="App" style={{ textAlign: "center" }}>
       <h2>This React JS Interview Questions</h2>
@@ -23,7 +29,9 @@ function App() {
       <Question6 type="span" text="JS" /> */}
       {/* <Question7 /> */}
       {/* <Question9 /> */}
-      <Question10 itemCount={10} />
+      {/* <Question10 itemCount={10} /> */}
+      <button onClick={handleToggle}>Toggle</button>
+      {toggle && <Question11 />}
     </div>
   );
 }
