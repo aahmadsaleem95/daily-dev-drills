@@ -9,7 +9,8 @@
 
 // import { Question10 } from "./interview_questions/day_2/Question10";
 import { useState } from "react";
-import Question13 from "./interview_questions/day_5/Question13";
+import { Question14 } from "./interview_questions/day_6/Question14";
+// import Question13 from "./interview_questions/day_5/Question13";
 // import { Question12 } from "./interview_questions/day_4/Question12";
 // import { Question11 } from "./interview_questions/day_3/Question11";
 
@@ -37,7 +38,8 @@ function App() {
       {toggle && <Question11 />} */}
       {/* <button onClick={handleToggle}>Toggle</button>
       {toggle && <Question12 />} */}
-      <Question13 />
+      {/* <Question13 /> */}
+      <Question14 />
     </div>
   );
 }
