@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Copy</title>
+  </head>
+  <body>
+    <h1>This is some content</h1>
+    <p>
+      Try to copy this text — you’ll see a different message when you paste it.
+    </p>
+
+    <script>
+      document.addEventListener("copy", (event) => {
+        // Prevent the default copy action
+        event.preventDefault();
+
+        // Set your custom text
+        const customText = "🤪";
+
+        // Write the custom text to the clipboard
+        if (event.clipboardData) {
+          event.clipboardData.setData("text/plain", customText);
+        } else if (window.clipboardData) {
+          // For older IE
+          window.clipboardData.setData("Text", customText);
+        }
+
+        console.log("Custom text copied to clipboard");
+      });
+    </script>
+  </body>
+</html>
